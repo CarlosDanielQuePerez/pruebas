@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Red Hopfield y BAM</title>
+
+		<meta name="description" content="Red Hopvield vs BAMn">
+		<meta name="author" content="Ismael Jimenez">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background="images/redhopfield/background.jpg">
+					<h1>Red Hopfield y BAM</h1>
+					<h3>Seminario de redes neuronales</h3>
+					<p>
+						<small>Creado por <a href="http://tuxtter.net">Ismael Jimenez</a> - Octubre 2023</small>
+					</p>
+				</section>
+				
+				<section data-background="images/redhopfield/background.jpg">
+					<section>
+						<h2>Red Hopfield</h2>
+					</section>
+					<section>
+						<h2>Red Hopfield</h2>
+						<p>Tiene una única capa de unidades procesadoras (Neuronas).
+						</p>
+					</section>
+					<section>
+						<h2>Red Hopfield</h2>
+						<p>Cada una de las unidades procesadoras tiene un valor o nivel de activación, también llamado estado, que es binario</p>
+					</section>
+					<section>
+						<h2>Red Hopfield</h2>
+						<p>Tiene un estado en cada momento.</p>
+					</section>
+					<section>
+						<h2>Red Hopfield</h2>
+						<p>Este estado se define por el vector de unos y ceros constituido por los estados de todas las unidades procesadoras.</p>
+					</section>
+					<section>
+						<h2>Red Hopfield</h2>
+						<p>El estado de una red con n unidades procesadoras, donde el elemento i tiene el estado ui se representa según la ecuación U = (u1, u2,........,un) = (+++--.......++)</p>
+					</section>
+					<section>
+						<h2>Red Hopfield</h2>
+						<p>Las unidades procesadoras de la red Hopfield están completamente interconectadas.</p>
+					</section>
+					<section>
+						<h2>Red Hopfield</h2>
+						<p>Esta topología convierte a la red Hopfield en una red recursiva ya que la salida de cada unidad está realimentada con las entradas de las demás unidades.</p>
+						<img width="446" height="402" data-src="images/redhopfield/redhopfieldbinaria.jpg" alt="red Hopfield binaria">
+					</section>
+					<section>
+						<h2>Red Hopfield</h2>
+						<p>Una característica de las redes Hopfield es la doble conexión por cada pareja de unidades procesadoras. Además los pesos asignados a ambas conexiones tienen el mismo valor.</p>
+						<img width="446" height="402" data-src="images/redhopfield/redhopfieldbinaria.jpg" alt="red Hopfield binaria">
+					</section>
+					<section>
+						<h2>Red Hopfield</h2>
+						<p>Aqui vemos un método alternativo de representación de la estructura y conexiones de la red Hopfield.</p>
+						<img width="646" height="402" data-src="images/redhopfield/redhopfieldrecursiva.jpg" alt="red Hopfield recursiva">
+					</section>
+					<section>
+						<h2>Red Hopfield</h2>
+						<p></p>
+					</section>
+					<section>
+						<h2>Red Hopfield</h2>
+						<p></p>
+					</section>
+				</section>
+				
+				<section data-background="images/perceptron/background2.jpg">
+					<section>
+						<h2>Red Bidirectional Associative Memory</h2>
+					</section>
+					<section>
+						<h2>Red Bidirectional Associative Memory</h2>
+						<ul>
+							<li>Modelo desarrollado por Kosko en 1987</li>
+							<li>Presenta aspectos inspirados por Grossberg</li>
+							<li>Generalizacion del modelo Hopfield en redes heteroasociativas</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Red BAM heteroasociativa</h2>
+						<p>es heteroasociativa en cuanto que acepta un vector de entrada en un conjunto de neuronas y produce otro vector relacionado, un vector de salida en otro conjunto de neuronas.</p>
+					</section>
+						<section>
+						<h2>Arquitectura de red BAM</h2>
+						<ul>
+							<li>Tienes 2 capas ademas de las capas de entrada y salida.</li>
+							<li>Se diseña para almacenar parejas asociadas de vectores.</li>
+							<li>Los pesos de las conexiones entre las capas centrales almacenan la información asociativa.</li>
+							<li>Si se aplica un vector de entrada A a los pesos W (es decir a la salida de la primera capa) se produce un vector de salida B.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Recuperacion de las asociaciones almacenadas</h2>
+						<p>La red debe ser entrenada para reconocer o recordar una serie de memorias o vectores. Este cálculo lo realizan las redes BAM modificando sus pesos a lo largo de la fase de entrenamiento utilizando la regla de Hebb</p>
+						<img width="200" height="70" data-src="images/redhopfield/formularedbam.jpg" alt="Formula Red BAM">
+					</section>
+					<section>
+						<h2>Recuperacion de las asociaciones almacenadas</h2>
+						<p>Las asociaciones o memorias de la red se almacenan en las matrices W y W^T. Para recuperar una asociación basta con presentar parcial o totalmente el vector A en la salida de la primera capa.</p>
+						<img width="200" height="70" data-src="images/redhopfield/formularedbam.jpg" alt="Formula Red BAM">
+					</section>
+					<section>
+						<h2>Recuperacion de las asociaciones almacenadas</h2>
+						<p>La red a través de W produce un vector de salida B en la capa segunda. Este vector opera sobre la matriz traspuesta W^T produciendo una réplica próxima al vector de entrada A en la salida de la capa primera.</p>
+						<img width="200" height="70" data-src="images/redhopfield/formularedbam.jpg" alt="Formula Red BAM">
+					</section>
+					<section>
+						<h2>Recuperacion de las asociaciones almacenadas</h2>
+						<p>Cada paso en el lazo de la red produce que los vectores de salida de ambas capas sean cada vez más próximas a la memoria o asociación almacenada.</p>
+						<img width="200" height="70" data-src="images/redhopfield/formularedbam.jpg" alt="Formula Red BAM">
+					</section>
+					<section>
+						<h2>Recuperacion de las asociaciones almacenadas</h2>
+						<p>Este proceso se lleva a cabo hasta que se alcance un punto estable llamado resonancia en el que los vectores pasan hacia adelante y hacia atrás reforzando las salidas sin modificarlas.</p>
+						<img width="200" height="70" data-src="images/redhopfield/formularedbam.jpg" alt="Formula Red BAM">
+					</section>
+				</section>
+				
+				<section data-background="images/perceptron/background.jpg">
+					<section>
+						<h2>Diferencias entre red Hopfield y BAM</h2>
+					</section>
+					<section>
+						<h2>Diferencias entre red Hopfield y BAM</h2>
+						<p>La relación estrecha entre la red BAM y la red Hopfield se manifiesta en el caso de que la matriz sea cuadrada y simétrica (W = W^T).</p>
+					</section>
+					<section>
+						<h2>BAM</h2>
+						<ul>
+							<li>Están orientadas al reconocimiento de patrones en tiempo real.</li>
+							<li>Son Redes de Neuronas Artificiales construidas, no entrenadas.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Hopfield</h2>
+						<ul>
+							<li>Reconocimiento de aquellos patrones que estén almacenados en sus pesos sinápticos.</li>
+							<li>Está formada por una única capa con interconexión total entre todos sus elementos de proceso.</li>
+						</ul>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
