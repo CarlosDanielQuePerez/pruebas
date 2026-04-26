@@ -1,7 +1,7 @@
 ---
 title: Arquitectura del perceptron
 layout: post
-permalink: /perceptron/
+permalink: /
 ---
 
 <section>
