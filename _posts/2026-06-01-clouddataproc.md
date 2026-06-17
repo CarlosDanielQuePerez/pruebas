@@ -40,6 +40,15 @@ permalink: /clouddataproc/
 </section>
 
 <section>
+    <h2>Ejemplos de virtualización</h2>
+    <ul>
+        <li><strong>Interpretación pura:</strong> un emulador que ejecuta un sistema operativo ARM sobre un procesador x86 sin compilar el código de antemano.</li>
+        <li><strong>Recompilación dinámica:</strong> un hipervisor que traduce fragmentos de código invitado en código nativo optimizado mientras el sistema corre.</li>
+        <li><strong>Bare metal:</strong> un servidor con VMware ESXi o Hyper-V que aloja varias máquinas virtuales directamente sobre el hardware.</li>
+    </ul>
+</section>
+
+<section>
     <section>
         <h2>1.2 Definiciones básicas</h2>
         <p>
@@ -64,6 +73,15 @@ permalink: /clouddataproc/
             IaaS entrega recursos de infraestructura como servidores virtuales, redes y almacenamiento bajo demanda. El usuario controla el sistema operativo, las aplicaciones y la configuración, mientras que el proveedor mantiene el hardware y la virtualización.
         </p>
     </section>
+</section>
+
+<section>
+    <h2>Ejemplos de modelos de servicio</h2>
+    <ul>
+        <li><strong>SaaS:</strong> usar Gmail o Microsoft 365 sin instalar nada en el equipo.</li>
+        <li><strong>PaaS:</strong> desplegar una aplicación web en Heroku o Google App Engine.</li>
+        <li><strong>IaaS:</strong> aprovisionar una máquina virtual en AWS EC2 o Azure Virtual Machines.</li>
+    </ul>
 </section>
 
 <section>
@@ -100,6 +118,16 @@ permalink: /clouddataproc/
 </section>
 
 <section>
+    <h2>Ejemplos de tipos de nube</h2>
+    <ul>
+        <li><strong>Nube pública:</strong> un sitio web de comercio electrónico alojado en AWS.</li>
+        <li><strong>Nube privada:</strong> una intranet empresarial en un centro de datos del propio departamento de TI.</li>
+        <li><strong>Nube comunitaria:</strong> una red colaborativa entre universidades que comparten recursos de investigación.</li>
+        <li><strong>Nube híbrida:</strong> una base de datos sensible en privado y aplicaciones web en la nube pública.</li>
+    </ul>
+</section>
+
+<section>
     <section>
         <h2>1.4 Arquitecturas</h2>
         <p>
@@ -124,4 +152,13 @@ permalink: /clouddataproc/
             Los sistemas distribuidos combinan múltiples nodos que cooperan para ofrecer servicios. En la nube, esto permite tolerancia a fallos, balanceo de carga y procesamiento paralelo de grandes volúmenes de datos.
         </p>
     </section>
+</section>
+
+<section>
+    <h2>Ejemplos de arquitecturas en la nube</h2>
+    <ul>
+        <li><strong>Microservicios:</strong> un portal de comercio con servicios independientes para carrito, catálogo y pagos.</li>
+        <li><strong>Orientada a eventos:</strong> un sistema de notificaciones que procesa pedidos mediante colas y eventos.</li>
+        <li><strong>Sistemas distribuidos:</strong> un clúster de datos que ejecuta análisis paralelo y tolera fallos en nodos individuales.</li>
+    </ul>
 </section>
