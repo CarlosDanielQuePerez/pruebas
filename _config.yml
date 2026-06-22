@@ -1,8 +1,8 @@
-title: Tuxtter Slides
+title: "Cloud Data Processing - Pruebas"
 description: Diapositivas de txttr
 
-baseurl: "/diapositivas" # the subpath of your site, e.g. /blog
-url: "http://tuxtter.net" # the base hostname & protocol for your site
+baseurl: "/pruebas" # the subpath of your site, e.g. /blog
+url: "https://CarlosDanielQuePerez.github.io" # the base hostname & protocol for your site
 permalink: /:title/
 
 
